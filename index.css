@@ -1,0 +1,132 @@
+*{
+padding: 0;
+margin: 0;
+font-family: sans-serif;
+}
+body{
+    background: linear-gradient(#000,#111);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+   
+}
+nav .logo{
+   color: white;
+   text-decoration: none;
+   font-size: 32px;
+   text-transform: uppercase;
+   font-weight: 700;
+   letter-spacing: 3px;
+
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+   padding: 20px 0px;
+   margin: auto;
+   width: 80%;
+    
+
+}
+.container{
+    width: 80%;
+    height: 80%;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+
+  
+}
+ nav ul li {
+    display: inline-block;
+    margin: 0px 10px;
+}
+body::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: red;
+    position: absolute;
+    z-index: -1;
+clip-path: circle(40% at right 70% );
+
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+   font-size: 18px;
+   font-weight: 500;
+}
+
+   nav ul li a:hover{
+    color: red;
+   }
+    .content .text{
+        color: white;
+    }
+    .content{
+      display: flex;
+      justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        width: 80%;
+        margin: auto;
+
+    }
+    .content .text{
+        width: 40%;
+        color: white;
+
+    }
+    .content .text h2{
+        text-transform: uppercase;
+        font-size: 40px;
+        font-weight: 700;
+        letter-spacing: 2px;
+       
+    }
+    
+    .content .text p{
+        font-size: 18px;
+        letter-spacing: 2px;
+        line-height: 25px;
+        margin: 10px 0px ;
+       
+    }
+    .content .image{
+        width: 40%;
+    }
+    .image img{
+        width: 500px;
+    }
+    
+     @media (min-width:950px) and (max-width:1150px){
+     .image img{
+        width: 400px;
+     }
+     }
+     @media (max-width:950px){
+        nav,.content{
+        
+            flex-direction: column;
+            
+           justify-content: center;
+
+        }
+        .content .image , .content .text{
+            width: 80%;
+            
+        }
+        .image img{
+            width: 300px;
+        }
+        
+        body::after{
+            clip-path: circle(50% at bottom);
+        }
+        .content .text{
+            height: 200px;
+        }
+     }
